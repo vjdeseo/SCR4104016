@@ -1,0 +1,24 @@
+{
+  "rsList": [
+    {
+      "rsInvoiceNo": "10050",
+      "rsDocumentStamp": 12,
+      "rsDocumentTax": 22,
+      "rsFST": 21,
+      "rsLGT": 21,
+      "rsBillingVAT": 11,
+      "rsOtherCharges": 120,
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

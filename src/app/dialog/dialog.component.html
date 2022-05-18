@@ -1,0 +1,104 @@
+<h2 mat-dialog-title class="arstvih" style="background-color: rgb(84,141,216); color: white;">Apply Reduction Summary to Valid Invoices</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="arstvif">
+        <form class="cf" [formGroup]="addForm">
+            <div class="picf" style="font-size: 13px;">
+                <div class="pict">
+                    <span style="font-weight: bold;">Policy Invoice Coverage</span>
+                </div>
+
+                <mat-form-field class="picin" appearance="outline" style="width:50%">
+                    <mat-label>Invoice No.</mat-label>
+                    <mat-select matNativeControl required style="height:100%; width: 100%;" ngModel="true" class = "test">
+                        <mat-option value="10025">10025</mat-option>
+                        <mat-option value="10050">10050</mat-option>
+                        <mat-option value="10075">10075</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="picdvs" appearance="outline">
+                    <mat-label>Valid Document Stamp</mat-label>
+                    <input matInput placeholder="0.00" value="" type="number" ng-disabled="false" >
+                </mat-form-field>
+
+                <mat-form-field class="picvpt" appearance="outline">
+                    <mat-label>Valid Premium Tax</mat-label>
+                    <input matInput placeholder="0.00" value="" type="number" [disabled]="disableSelect.value">
+                </mat-form-field>
+
+                <mat-form-field class="picvfst" appearance="outline">
+                    <mat-label>Valid FST</mat-label>
+                    <input matInput placeholder="0.00" value="" type="number" [disabled]="disableSelect.value">
+                </mat-form-field>
+
+                <mat-form-field class="picvlgt" appearance="outline">
+                    <mat-label>Valid LGT</mat-label>
+                    <input matInput placeholder="0.00" value="" type="number" [disabled]="disableSelect.value">
+                </mat-form-field>
+
+                <mat-form-field class="picvbvat" appearance="outline">
+                    <mat-label>Valid Billing VAT</mat-label>
+                    <input matInput placeholder="0.00" value="" type="number" [disabled]="disableSelect.value">
+                </mat-form-field>
+
+                <mat-form-field class="picvoc" appearance="outline">
+                    <mat-label>Valid Other Charges</mat-label>
+                    <input matInput placeholder="0.00" value="" type="number" [disabled]="disableSelect.value">
+                </mat-form-field>
+            </div>
+
+                <div class="rsfc" style="font-size: 13px;">
+                    <div class="rst">
+                        <span style="font-weight: bold;">Reduction Summary</span>
+                    </div>
+
+                    <mat-form-field class="risn" appearance="outline" style="width:50%">
+                        <mat-label>Invoice No.</mat-label>
+                        <mat-select matNativeControl required style="height:100%; width: 100%;" formControlName="rsInvoiceNo">
+                            <mat-option value="10025">10025</mat-option>
+                            <mat-option value="10050">10050</mat-option>
+                            <mat-option value="10075">10075</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="rsdvs" appearance="outline">
+                        <mat-label>Document Stamp</mat-label>
+                        <input matInput placeholder="0.00" value="" type="number" formControlName="rsDocumentStamp">
+                    </mat-form-field>
+
+                    <mat-form-field class="rsdvs" appearance="outline">
+                        <mat-label>Document Tax</mat-label>
+                        <input matInput placeholder="0.00" value="" type="number" formControlName="rsDocumentTax">
+                    </mat-form-field>
+
+                    <mat-form-field class="rsvfst" appearance="outline">
+                        <mat-label>FST</mat-label>
+                        <input matInput placeholder="0.00" value="" type="number" formControlName="rsFST">
+                    </mat-form-field>
+
+                    <mat-form-field class="rsvlgt" appearance="outline">
+                        <mat-label>LGT</mat-label>
+                        <input matInput placeholder="0.00" value="" type="number" formControlName="rsLGT">
+                    </mat-form-field>
+
+                    <mat-form-field class="rsvbvat" appearance="outline">
+                        <mat-label>Billing VAT</mat-label>
+                        <input matInput placeholder="0.00" value="" type="number" formControlName="rsBillingVAT">
+                    </mat-form-field>
+
+                    <mat-form-field class="rsvoc" appearance="outline">
+                        <mat-label>Other Charges</mat-label>
+                        <input matInput placeholder="0.00" value="" type="number" formControlName="rsOtherCharges">
+                    </mat-form-field>
+                </div>
+        </form>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end" class="cc">
+    <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial class="cc-confirm" style="padding:1% 3%; font-size:13px;" (click)="addList()">
+        <span style="display: flex; align-items: center;"><mat-icon>save</mat-icon>{{actionBtn}}</span>
+    </button>
+    <button mat-raised-button mat-dialog-close class="cc-cancel" style="padding:1% 3%">
+      <span style="display: flex; align-items: center;"><mat-icon>cancel</mat-icon>CANCEL</span>
+    </button>
+</mat-dialog-actions>
