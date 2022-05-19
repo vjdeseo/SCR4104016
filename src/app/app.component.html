@@ -1,7 +1,7 @@
 
   <mat-toolbar>
     <span class="example-spacer"></span>
-    <button mat-raised-button color="primary" (click)="openDialog()">Add</button>
+    <button mat-raised-button color="primary" (click)="openDialog()" class="Add-Button">Add</button>
   </mat-toolbar>
   
   <div class="MyTable">
@@ -9,9 +9,11 @@
         
       <div class="mat-elevation-z8" style="padding: 0 auto; overflow: auto;">        
         <table mat-table [dataSource]="dataSource" style="width: 100%;">
+          
+
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef  width="100px"></th>
-            <td mat-cell *matCellDef="let row" class="tdaction" style="text-align: center;">
+            <td mat-cell *matCellDef="let row" class="tdaction" style="text-align: center; border-right: solid 1px lightgray;">
               <button mat-icon-button (click)="deleteList(row.id)" color="warn" style="padding: 0;">
                   <mat-icon>delete</mat-icon>
               </button>

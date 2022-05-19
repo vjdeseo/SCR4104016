@@ -3,12 +3,32 @@
     {
       "rsInvoiceNo": "10050",
       "rsDocumentStamp": 12,
-      "rsDocumentTax": 22,
-      "rsFST": 21,
-      "rsLGT": 21,
-      "rsBillingVAT": 11,
-      "rsOtherCharges": 120,
+      "rsDocumentTax": 20,
+      "rsFST": 30,
+      "rsLGT": 22,
+      "rsBillingVAT": 21,
+      "rsOtherCharges": 20,
       "id": 1
+    },
+    {
+      "rsInvoiceNo": "10050",
+      "rsDocumentStamp": 30,
+      "rsDocumentTax": 30,
+      "rsFST": 30,
+      "rsLGT": 30,
+      "rsBillingVAT": 30,
+      "rsOtherCharges": 30,
+      "id": 2
+    },
+    {
+      "rsInvoiceNo": "10050",
+      "rsDocumentStamp": 10,
+      "rsDocumentTax": 10,
+      "rsFST": 10,
+      "rsLGT": 10,
+      "rsBillingVAT": 10,
+      "rsOtherCharges": 10,
+      "id": 3
     }
   ],
   "comments": [

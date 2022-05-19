@@ -5,6 +5,7 @@ import { ApiService } from './services/api.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -29,7 +30,8 @@ export class AppComponent implements OnInit{
 
   openDialog() {
     this.dialog.open(DialogComponent, {
-      width:'65%',
+      width:'80%',
+      height: '85%'
     }).afterClosed().subscribe(val=>{
       if(val == 'SAVE'){
         this.getAllList();
