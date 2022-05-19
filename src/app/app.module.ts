@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import { NgxCurrencyModule } from "ngx-currency";
 
 
 
@@ -42,7 +43,8 @@ import {MatSortModule} from '@angular/material/sort';
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    NgxCurrencyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

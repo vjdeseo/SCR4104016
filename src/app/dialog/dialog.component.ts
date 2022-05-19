@@ -12,12 +12,12 @@ import {FormControl} from '@angular/forms';
 })
 export class DialogComponent implements OnInit {
 
-  public isDisabled = true;
   addForm !: FormGroup;
   actionBtn : string = "SAVE";
   rsInvoice1 : boolean = false;
   disableSelect = new FormControl(false);
-  
+
+  invoiceSelected = new FormControl('');
 
   constructor(private formBuilder : FormBuilder, 
     private api : ApiService, 
@@ -52,8 +52,10 @@ export class DialogComponent implements OnInit {
 
   addList(){
     if(!this.editData){
+      this.addForm.controls['rsInvoiceNo'].setValue(this.invoiceSelected.value); 
       if(this.addForm.valid){
-        this.api.postadd(this.addForm.value)
+        
+        this.api.postadd(this.addForm.value)  
         .subscribe({
           next:(res)=>{
             alert("List Added Successfully");

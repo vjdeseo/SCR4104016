@@ -29,6 +29,56 @@
       "rsBillingVAT": 10,
       "rsOtherCharges": 10,
       "id": 3
+    },
+    {
+      "rsInvoiceNo": "10050",
+      "rsDocumentStamp": 12,
+      "rsDocumentTax": 12,
+      "rsFST": 12,
+      "rsLGT": 12,
+      "rsBillingVAT": 12,
+      "rsOtherCharges": 12,
+      "id": 4
+    },
+    {
+      "rsInvoiceNo": "10050",
+      "rsDocumentStamp": 2500,
+      "rsDocumentTax": 10,
+      "rsFST": 10,
+      "rsLGT": 10,
+      "rsBillingVAT": 10,
+      "rsOtherCharges": 10,
+      "id": 5
+    },
+    {
+      "rsInvoiceNo": "10050",
+      "rsDocumentStamp": 50,
+      "rsDocumentTax": 522.2,
+      "rsFST": 21,
+      "rsLGT": 10,
+      "rsBillingVAT": 100,
+      "rsOtherCharges": 253.33,
+      "id": 6
+    },
+    {
+      "rsInvoiceNo": "10050",
+      "rsDocumentStamp": 140,
+      "rsDocumentTax": 410,
+      "rsFST": 110.04,
+      "rsLGT": 1.11,
+      "rsBillingVAT": 11111.11,
+      "rsOtherCharges": 1111110,
+      "id": 7
+    },
+    {
+      "rsInvoiceNo": "true",
+      "rsDocumentStamp": 210,
+      "rsDocumentTax": 2352.22,
+      "rsFST": 250,
+      "rsLGT": 0.41,
+      "rsBillingVAT": 4110,
+      "rsOtherCharges": 41111.11,
+      "id": 8
     }
   ],
   "comments": [
