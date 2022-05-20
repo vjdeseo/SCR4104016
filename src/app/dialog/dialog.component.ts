@@ -14,9 +14,6 @@ export class DialogComponent implements OnInit {
 
   addForm !: FormGroup;
   actionBtn : string = "SAVE";
-  rsInvoice1 : boolean = false;
-  disableSelect = new FormControl(false);
-
   invoiceSelected = new FormControl('');
 
   constructor(private formBuilder : FormBuilder, 

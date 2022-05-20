@@ -23,32 +23,32 @@
 
                 <mat-form-field class="picdvs" appearance="outline">
                     <mat-label>Valid Document Stamp</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" ng-disabled="false" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
 
                 <mat-form-field class="picvpt" appearance="outline">
                     <mat-label>Valid Premium Tax</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" [disabled]="disableSelect.value" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
 
                 <mat-form-field class="picvfst" appearance="outline">
                     <mat-label>Valid FST</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" [disabled]="disableSelect.value" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
 
                 <mat-form-field class="picvlgt" appearance="outline">
                     <mat-label>Valid LGT</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" [disabled]="disableSelect.value" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
 
                 <mat-form-field class="picvbvat" appearance="outline">
                     <mat-label>Valid Billing VAT</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" [disabled]="disableSelect.value" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
 
                 <mat-form-field class="picvoc" appearance="outline">
                     <mat-label>Valid Other Charges</mat-label>
-                    <input matInput placeholder="0.00" value="" type="number" [disabled]="disableSelect.value" style="cursor: not-allowed">
+                    <input matInput placeholder="0.00" value="" type="number" disabled="true" style="cursor: not-allowed">
                 </mat-form-field>
             </div>
 
@@ -59,8 +59,8 @@
 
                     <mat-form-field class="risn" appearance="outline" style="width:50%">
                         <mat-label>Invoice No.</mat-label>
-                        <input matInput placeholder="0.00" value="" type="number" [disabled]="disableSelect.value"
-                            style="cursor: not-allowed" [value]="invoiceSelected.value" formControlName="rsInvoiceNo">
+                        <input matInput placeholder="0.00" value="" type="number" [disabled]="true"
+                            [value]="invoiceSelected.value" formControlName="rsInvoiceNo">
                     </mat-form-field>
 
                     <mat-form-field class="rsdvs" appearance="outline">
@@ -96,11 +96,11 @@
         </form>
     </div>
 </mat-dialog-content>
-<mat-dialog-actions align="end" class="cc">
+<mat-dialog-actions align="end" class="cc" style="margin-right: 30px;">
     <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial class="cc-confirm" style="padding:0% 2%; font-size:13px;" (click)="addList()">
         <span style="display: flex; align-items: center;"><mat-icon>save</mat-icon>{{actionBtn}}</span>
     </button>
-    <button mat-raised-button mat-dialog-close class="cc-cancel" style="padding:0% 2%">
+    <button mat-raised-button mat-dialog-close class="cc-cancel" tyle="padding:0% 2%; font-size:13px;">
       <span style="display: flex; align-items: center;"><mat-icon>cancel</mat-icon>CANCEL</span>
     </button>
 </mat-dialog-actions>
