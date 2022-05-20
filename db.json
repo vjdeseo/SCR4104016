@@ -69,16 +69,6 @@
       "rsBillingVAT": 11111.11,
       "rsOtherCharges": 1111110,
       "id": 7
-    },
-    {
-      "rsInvoiceNo": "true",
-      "rsDocumentStamp": 210,
-      "rsDocumentTax": 2352.22,
-      "rsFST": 250,
-      "rsLGT": 0.41,
-      "rsBillingVAT": 4110,
-      "rsOtherCharges": 41111.11,
-      "id": 8
     }
   ],
   "comments": [

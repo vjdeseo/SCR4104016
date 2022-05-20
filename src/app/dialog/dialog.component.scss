@@ -60,13 +60,18 @@
     text-align: right;
     height: 20px;
   }
-  .picf, .rsfc{
+  .picf {
     width: 50%;
-    padding: 2% 3% 0 3%;
+    padding: 0.5% 1% 0 8%;
+  }
+  .rsfc{
+    width: 50%;
+    padding: 0.5% 8% 0 1%;
   }
   
   .cf{
     display: flex;
+    height: 100%;
   }
   .cc{
     width: auto;
@@ -120,6 +125,27 @@
   align-items: center;
   
 }
+::ng-deep .mat-dialog-container {
+  padding:10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  margin: 0;
+  padding: 5px 0;
+}
+
+::ng-deep .mat-dialog-actions{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  top:20%;
+} 
+::ng-deep .mat-dialog-content{
+  max-height: 100%;
+}
+
 
   @media screen and(max-width: 720px){
     .cf{
@@ -137,4 +163,8 @@
     .rst{
         margin-top: 5%;
     }
-  }
+
+    .mat-dialog-content{
+      overflow: auto;
+    }
+  } 
