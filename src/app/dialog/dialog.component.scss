@@ -163,8 +163,22 @@
     .rst{
         margin-top: 5%;
     }
+    .arstvih{
+      text-align: center;
+      display: none;
+    }
 
-    .mat-dialog-content{
+    ::ng-deep .mat-dialog-container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    ::ng-deep .ng-star-inserted{
       overflow: auto;
+      overflow-x: hidden;
+    }
+
+    ::ng-deep .cdk-overlay-pane{
+      overflow: hidden;
     }
   } 

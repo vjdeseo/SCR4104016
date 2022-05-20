@@ -24,7 +24,6 @@ export class DialogComponent implements OnInit {
   ngOnInit(): void {
     this.addForm = this.formBuilder.group({
 
-      rsInvoiceNo : ['',Validators.required],
       rsDocumentStamp : ['',Validators.required],
       rsDocumentTax : ['',Validators.required],
       rsFST : ['',Validators.required],
