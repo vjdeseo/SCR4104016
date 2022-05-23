@@ -18,7 +18,7 @@
     -webkit-appearance: none;
     margin: 0;
   }
-  
+
   body{
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
@@ -27,11 +27,11 @@
     border: solid 1 px black;
   }
 
-  
+
   .picin, .rsin{
     width: 25%;
   }
-  
+
   .picin select, .rsin select{
     width: 50%;
     font-size: 13px;
@@ -39,7 +39,7 @@
     border-bottom: solid 1px black;
     height: 20px;
   }
-  
+
   .picdvs, .picvpt, .picvfst, .picvlgt, .picvbvat, .picvoc{
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@
     width: 50%;
     padding: 0.5% 8% 0 1%;
   }
-  
+
   .cf{
     display: flex;
     height: 100%;
@@ -103,7 +103,7 @@
     border-radius: 10px;
     cursor: pointer;
   }
-  
+
   .cc-cancel:hover{
     transition-duration: 400ms;
     background-color: red;
@@ -116,14 +116,14 @@
 }
 
 .mat-dialog-title.title-dialog{
-  background-color: royalblue; 
-  font-size: 10px; color: white; 
-  border-radius: 10px; 
+  background-color: royalblue;
+  font-size: 10px; color: white;
+  border-radius: 10px;
   height: 5px;
   margin: 10px 0;
   display: flex;
   align-items: center;
-  
+
 }
 ::ng-deep .mat-dialog-container {
   padding:10px;
@@ -141,7 +141,7 @@
   margin: 0;
   padding: 0;
   top:20%;
-} 
+}
 ::ng-deep .mat-dialog-content{
   max-height: 100%;
 }
@@ -183,4 +183,4 @@
     ::ng-deep .cdk-overlay-pane{
       overflow: hidden;
     }
-  } 
+  }
