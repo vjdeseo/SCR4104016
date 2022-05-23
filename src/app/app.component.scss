@@ -21,22 +21,30 @@
   tr.mat-header-row {
     height: 40px;
 }
+tr.mat-row{
+  height: 40px;
+}
 
   td.mat-cell{
     font-size: 11px;
     text-align: right;
     padding: 0 15px;
   }
+
+  ::ng-deep .mat-cell{
+    padding: 0;
+    margin: 0;
+  }
   .mat-table{
     overflow: scroll;
     table-layout: fixed;
   }
-  
+
   .example-spacer {
       flex: 1 1 auto;
-      
+
     }
-  
+
   .Add-Button{
     background-color: blue;
     font-size: 13px;
@@ -44,8 +52,8 @@
   .Add-Button:hover{
     background-color: darkblue;
   }
-    
-  
+
+
   @media screen and(max-width: 500px){
     th{
       padding: 0 100%;
@@ -59,4 +67,3 @@
       overflow: auto;
     }
   }
-  

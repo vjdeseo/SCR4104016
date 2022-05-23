@@ -1,15 +1,15 @@
 
-  <mat-toolbar style="background-color: white;">
+  <mat-toolbar style="background-color: white; padding-right: 100px;">
     <span class="example-spacer"></span>
-    <button mat-raised-button color="primary" (click)="openDialog()" class="Add-Button">ADD</button>
+    <button mat-raised-button color="primary" (click)="openDialog()" class="Add-Button">ADD DATA</button>
   </mat-toolbar>
-  
+
   <div class="MyTable">
     <div style="margin-top: 5px;">
-        
-      <div class="mat-elevation-z8" style="padding: 0 auto; overflow: auto;">        
+
+      <div class="" style="padding: 0 auto; overflow: auto; margin: 0 50px;">
         <table mat-table [dataSource]="dataSource" style="width: 100%;">
-          
+
 
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef  width="100px"></th>
@@ -17,65 +17,65 @@
               <button mat-icon-button (click)="deleteList(row.id)" color="warn" style="padding: 0;">
                   <mat-icon>delete</mat-icon>
               </button>
-  
+
               <button mat-icon-button (click)="editItem(row)" color="primary" style="padding: 0;">
                 <mat-icon>edit</mat-icon>
             </button>
             </td>
           </ng-container>
-  
+
           <!-- Position Column -->
           <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef width="75px">No.</th>
             <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.id}} </td>
           </ng-container>
-      
+
           <!-- Name Column -->
           <ng-container matColumnDef="rsInvoiceNo">
             <th mat-header-cell *matHeaderCellDef width="75px">Invoice&nbsp;No.</th>
             <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.rsInvoiceNo}} </td>
           </ng-container>
-      
+
           <!-- Weight Column -->
           <ng-container matColumnDef="rsDocumentStamp">
             <th mat-header-cell *matHeaderCellDef width="125px">Document&nbsp;Stamp</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsDocumentStamp | currency:"PHP":"symbol"}} </td>
+            <td mat-cell *matCellDef="let row"> {{row.rsDocumentStamp | currency:" ":"symbol"}} </td>
           </ng-container>
-      
+
           <!-- Symbol Column -->
           <ng-container matColumnDef="rsDocumentTax">
             <th mat-header-cell *matHeaderCellDef width="125px">Document&nbsp;Tax</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsDocumentTax | currency:"PHP":"symbol"}} </td>
+            <td mat-cell *matCellDef="let row"> {{row.rsDocumentTax | currency:" ":"symbol"}} </td>
           </ng-container>
-          
+
           <ng-container matColumnDef="rsFST">
             <th mat-header-cell *matHeaderCellDef width="100px">FST</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsFST | currency:"PHP":"symbol"}} </td>
+            <td mat-cell *matCellDef="let row"> {{row.rsFST | currency:" ":"symbol"}} </td>
           </ng-container>
-  
+
           <ng-container matColumnDef="rsLGT">
             <th mat-header-cell *matHeaderCellDef width="100px">LGT</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsLGT | currency:"PHP":"symbol"}} </td>
+            <td mat-cell *matCellDef="let row"> {{row.rsLGT | currency:" ":"symbol"}} </td>
           </ng-container>
-  
+
           <ng-container matColumnDef="rsBillingVAT">
             <th mat-header-cell *matHeaderCellDef width="100px">Billing&nbsp;VAT</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsBillingVAT | currency:"PHP":"symbol"}} </td>
+            <td mat-cell *matCellDef="let row"> {{row.rsBillingVAT  | currency:" ":"symbol"}} </td>
           </ng-container>
-  
+
           <ng-container matColumnDef="rsOtherCharges">
             <th mat-header-cell *matHeaderCellDef width="100px">Other&nbsp;Charges</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsOtherCharges | currency:"PHP":"symbol"}} </td>
+            <td mat-cell *matCellDef="let row"> {{row.rsOtherCharges | currency:" ":"symbol"}} </td>
           </ng-container>
-  
-          
-  
+
+
+
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-      
-      
+
+
       </div>
-      
+
     </div>
   </div>
