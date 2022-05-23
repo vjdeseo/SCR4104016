@@ -16,14 +16,14 @@ export class DialogComponent implements OnInit {
   actionBtn : string = "SAVE";
   invoiceSelected = new FormControl('');
 
-  constructor(private formBuilder : FormBuilder, 
-    private api : ApiService, 
+  constructor(private formBuilder : FormBuilder,
+    private api : ApiService,
     @Inject(MAT_DIALOG_DATA) public editData :  any,
     private dialogRef : MatDialogRef<DialogComponent>) { }
 
   ngOnInit(): void {
     this.addForm = this.formBuilder.group({
-
+      rsInvoiceNo : ['',Validators.required],
       rsDocumentStamp : ['',Validators.required],
       rsDocumentTax : ['',Validators.required],
       rsFST : ['',Validators.required],
@@ -43,15 +43,14 @@ export class DialogComponent implements OnInit {
        this.addForm.controls['rsOtherCharges'].setValue(this.editData.rsOtherCharges);
     }
 
-    
+
   }
 
   addList(){
     if(!this.editData){
-      this.addForm.controls['rsInvoiceNo'].setValue(this.invoiceSelected.value); 
+      this.addForm.controls['rsInvoiceNo'].setValue(this.invoiceSelected.value);
       if(this.addForm.valid){
-        
-        this.api.postadd(this.addForm.value)  
+        this.api.postadd(this.addForm.value)
         .subscribe({
           next:(res)=>{
             alert("List Added Successfully");
@@ -62,7 +61,7 @@ export class DialogComponent implements OnInit {
             alert("Error in Adding List")
           }
         })
-        
+
     }
     }else{
       this.UpdateData()
@@ -81,7 +80,7 @@ export class DialogComponent implements OnInit {
       }
     })
   }
-  
-  
-  
+
+
+
 }

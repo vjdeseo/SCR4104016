@@ -14,7 +14,7 @@
                 <mat-form-field class="picin" appearance="outline" style="width:50%">
                     <mat-label>Invoice No.</mat-label>
                     <mat-select matNativeControl required style="height:100%; width: 100%;" ngModel="true" class="test"
-                        [formControl]="invoiceSelected">
+                        [formControl]="invoiceSelected" formControlName="rsInvoiceNo">
                         <mat-option value="10025">10025</mat-option>
                         <mat-option value="10050">10050</mat-option>
                         <mat-option value="10075">10075</mat-option>
@@ -60,7 +60,7 @@
                     <mat-form-field class="risn" appearance="outline" style="width:50%">
                         <mat-label>Invoice No.</mat-label>
                         <input matInput placeholder="0.00" value="" type="number" [disabled]="true"
-                            [value]="invoiceSelected.value" formControlName="rsInvoiceNo">
+                            [value]="invoiceSelected.value">
                     </mat-form-field>
 
                     <mat-form-field class="rsdvs" appearance="outline">

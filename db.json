@@ -12,16 +12,6 @@
     },
     {
       "rsInvoiceNo": "10050",
-      "rsDocumentStamp": 30,
-      "rsDocumentTax": 30,
-      "rsFST": 30,
-      "rsLGT": 30,
-      "rsBillingVAT": 30,
-      "rsOtherCharges": 30,
-      "id": 2
-    },
-    {
-      "rsInvoiceNo": "10050",
       "rsDocumentStamp": 10,
       "rsDocumentTax": 10,
       "rsFST": 10,
@@ -49,26 +39,6 @@
       "rsBillingVAT": 10,
       "rsOtherCharges": 10,
       "id": 5
-    },
-    {
-      "rsInvoiceNo": "10050",
-      "rsDocumentStamp": 50,
-      "rsDocumentTax": 522.2,
-      "rsFST": 21,
-      "rsLGT": 10,
-      "rsBillingVAT": 100,
-      "rsOtherCharges": 253.33,
-      "id": 6
-    },
-    {
-      "rsInvoiceNo": "10050",
-      "rsDocumentStamp": 140,
-      "rsDocumentTax": 410,
-      "rsFST": 110.04,
-      "rsLGT": 1.11,
-      "rsBillingVAT": 11111.11,
-      "rsOtherCharges": 1111110,
-      "id": 7
     }
   ],
   "comments": [
