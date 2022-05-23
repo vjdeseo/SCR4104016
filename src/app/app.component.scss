@@ -53,6 +53,10 @@ tr.mat-row{
     background-color: darkblue;
   }
 
+  ::ng-deep .mat-dialog-title{
+    font-family: 'Poppins', sans-serif;
+  }
+
 
   @media screen and(max-width: 500px){
     th{

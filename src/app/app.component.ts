@@ -57,7 +57,8 @@ export class AppComponent implements OnInit{
 
   editItem(row : any){
     this.dialog.open(DialogComponent,{
-      width:'65%',
+      width:'85%',
+      height: '83%',
       data : row,
     }).afterClosed().subscribe(val=>{
       if(val == 'UPDATE'){
