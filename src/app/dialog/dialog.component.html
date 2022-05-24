@@ -1,5 +1,5 @@
-<div style="display:flex; justify-content: space-between;border-bottom: solid 1px blue; border-top: solid 1px blue;" >
-<span mat-dialog-title class="title-dialog" >Trans. No. 123</span>
+<div style="display:flex; justify-content: space-between;border-bottom: solid 2px blue; border-top: solid 2px blue; margin: 0 40px;" >
+<span mat-dialog-title class="title-dialog1" style="display: hide;"></span>
 <p mat-dialog-title class="arstvih">Apply Reduction Summary to Valid Invoices</p>
 <span mat-dialog-title class="title-dialog" >Screen ID: SCR4104016</span>
 </div>
@@ -12,7 +12,7 @@
                     <span style="font-weight: bold;">Policy Invoice Coverage</span>
                 </div>
 
-                <mat-form-field class="picin" appearance="outline" style="width:50%">
+                <mat-form-field class="picin" appearance="outline" style="width:70%">
                     <mat-label>Invoice No.</mat-label>
                     <mat-select matNativeControl required style="height:100%; width: 100%;" ngModel="true" class="test"
                         [formControl]="invoiceSelected" formControlName="rsInvoiceNo">
@@ -58,10 +58,10 @@
                         <span style="font-weight: bold;">Reduction Summary</span>
                     </div>
 
-                    <mat-form-field class="risn" appearance="outline" style="width:50%">
+                    <mat-form-field class="risn" appearance="outline" style="width:70%;">
                         <mat-label>Invoice No.</mat-label>
                         <input matInput placeholder="0.00" value="" type="number" [disabled]="true"
-                            [value]="invoiceSelected.value">
+                            [value]="invoiceSelected.value" >
                     </mat-form-field>
 
                     <mat-form-field class="rsdvs" appearance="outline">
@@ -97,7 +97,7 @@
         </form>
     </div>
 </mat-dialog-content>
-<mat-dialog-actions align="end" style="margin-right: 30px;">
+<mat-dialog-actions align="end" style="margin-right: 70px;">
     <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial class="cc-confirm" style="padding:0% 2%; font-size:13px; margin: 0;" (click)="addList()">
         <span style="display: flex; align-items: center;"><mat-icon>save</mat-icon>{{actionBtn}}</span>
     </button>

@@ -1,7 +1,7 @@
 
   <mat-toolbar style="background-color: white; padding-right: 100px;">
     <span class="example-spacer"></span>
-    <button mat-raised-button color="primary" (click)="openDialog()" class="Add-Button">ADD DATA</button>
+    <button mat-raised-button color="primary" (click)="openDialog()" class="Add-Button"><mat-icon>add_circle</mat-icon>ADD DATA</button>
   </mat-toolbar>
 
   <div class="MyTable">
@@ -19,7 +19,7 @@
               </button>
 
               <button mat-icon-button (click)="editItem(row)" color="primary" style="padding: 0;">
-                <mat-icon>edit</mat-icon>
+                <i class="fas fa-edit"></i>
             </button>
             </td>
           </ng-container>
