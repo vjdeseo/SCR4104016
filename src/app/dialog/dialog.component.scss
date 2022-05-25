@@ -135,17 +135,17 @@
   max-height:100vh;
 }
 ::ng-deep .mat-form-field-wrapper {
-  margin: 0;
+  margin: 0.1em 0;
   padding: 5px 0;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-wrapper {
+  margin: -0.25em;
 }
 
 ::ng-deep .mat-dialog-actions{
   margin: 0;
   padding: 0;
-}
-
-::ng-deep .mat-form-field-wrapper{
-  margin: 0.1em 0;
 }
 
   @media screen and(max-width: 720px){

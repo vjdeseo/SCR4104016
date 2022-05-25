@@ -2,16 +2,6 @@
   "rsList": [
     {
       "rsInvoiceNo": "10075",
-      "rsDocumentStamp": 1210,
-      "rsDocumentTax": 100,
-      "rsFST": 1000.02,
-      "rsLGT": 120,
-      "rsBillingVAT": 130,
-      "rsOtherCharges": 122,
-      "id": 1
-    },
-    {
-      "rsInvoiceNo": "10075",
       "rsDocumentStamp": 1200,
       "rsDocumentTax": 1000,
       "rsFST": 10000,
@@ -29,6 +19,26 @@
       "rsBillingVAT": 1246,
       "rsOtherCharges": 1246,
       "id": 3
+    },
+    {
+      "rsInvoiceNo": "true",
+      "rsDocumentStamp": 212,
+      "rsDocumentTax": 120,
+      "rsFST": 2012,
+      "rsLGT": 1212120,
+      "rsBillingVAT": 21212121210,
+      "rsOtherCharges": 121110,
+      "id": 4
+    },
+    {
+      "rsInvoiceNo": "10050",
+      "rsDocumentStamp": 110,
+      "rsDocumentTax": 10,
+      "rsFST": 10,
+      "rsLGT": 1,
+      "rsBillingVAT": 0.01,
+      "rsOtherCharges": 1,
+      "id": 5
     }
   ],
   "comments": [
