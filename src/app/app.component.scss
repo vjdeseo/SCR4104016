@@ -1,3 +1,5 @@
+
+
 :host {
     font-family: 'Poppins', sans-serif;
     color: #333;
@@ -20,10 +22,14 @@
   }
   tr.mat-header-row {
     height: 40px;
-}
-tr.mat-row{
-  height: 40px;
-}
+  }
+  tr.mat-row{
+    height: 33px;
+  }
+
+  .mat-icon-button{
+    height: 33px
+  }
 
   td.mat-cell{
     font-size: 11px;
@@ -70,4 +76,5 @@ tr.mat-row{
     table{
       overflow: auto;
     }
+
   }
