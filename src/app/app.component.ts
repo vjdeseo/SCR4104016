@@ -30,8 +30,8 @@ export class AppComponent implements OnInit{
 
   openDialog() {
     this.dialog.open(DialogComponent, {
-      width:'85%',
-      height: '88%'
+      width:'60%',
+      height: '68%'
     }).afterClosed().subscribe(val=>{
       if(val == 'SAVE'){
         this.getAllList();
@@ -57,8 +57,8 @@ export class AppComponent implements OnInit{
 
   editItem(row : any){
     this.dialog.open(DialogComponent,{
-      width:'85%',
-      height: '83%',
+      width:'60%',
+      height: '68%',
       data : row,
     }).afterClosed().subscribe(val=>{
       if(val == 'UPDATE'){
