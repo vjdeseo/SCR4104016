@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 <div style="display:flex; justify-content: space-between;border-bottom: solid 1px blue; border-top: solid 1px blue;">
     <span mat-dialog-title class="title-dialog">Trans. No. 123</span>
     <p mat-dialog-title class="arstvih">Apply Reduction Summary to Valid Invoices</p>
     <span mat-dialog-title class="title-dialog">Screen ID: SCR4104016</span>
-=======
-<div style="display:flex; justify-content: space-between;border-bottom: solid 2px blue; border-top: solid 2px blue; margin: 0 40px;" >
-<span mat-dialog-title class="title-dialog1" style="display: hide;"></span>
-<p mat-dialog-title class="arstvih">Apply Reduction Summary to Valid Invoices</p>
-<span mat-dialog-title class="title-dialog" >Screen ID: SCR4104016</span>
->>>>>>> 8c77fa30ec2c4ad7545d0f48c6a58f5886ab5f30
 </div>
 
 <mat-dialog-content class="mat-typography">
@@ -19,7 +12,7 @@
                     <span style="font-weight: bold;">Policy Invoice Coverage</span>
                 </div>
 
-                <mat-form-field class="picin" appearance="outline" style="width:70%">
+                <mat-form-field class="picin" appearance="outline" style="width:50%">
                     <mat-label>Invoice No.</mat-label>
                     <mat-select matNativeControl required style="height:100%; width: 100%;" ngModel="true" class="test" [formControl]="invoiceSelected" formControlName="rsInvoiceNo">
                         <mat-option value="10025">10025</mat-option>
@@ -59,52 +52,9 @@
                 </mat-form-field>
             </div>
 
-<<<<<<< HEAD
             <div class="rsfc" style="font-size: 13px;">
                 <div class="rst">
                     <span style="font-weight: bold;">Reduction Summary</span>
-=======
-                <div class="rsfc" style="font-size: 13px;">
-                    <div class="rst">
-                        <span style="font-weight: bold;">Reduction Summary</span>
-                    </div>
-
-                    <mat-form-field class="risn" appearance="outline" style="width:70%;" >
-                        <mat-label>Invoice No.</mat-label>
-                        <input matInput placeholder="0.00" value="" type="number" [disabled]="true"
-                            [value]="invoiceSelected.value" >
-                    </mat-form-field>
-
-                    <mat-form-field class="rsdvs" appearance="outline">
-                        <mat-label>Document Stamp</mat-label>
-                        <input matInput currencyMask placeholder="0.00" value="" formControlName="rsDocumentStamp" [options]="{ prefix: '', thousands: ',', decimal: '.' }"/>
-                    </mat-form-field>
-
-                    <mat-form-field class="rsdvs" appearance="outline">
-                        <mat-label>Document Tax</mat-label>
-                        <input matInput currencyMask placeholder="0.00" value="" formControlName="rsDocumentTax" [options]="{ prefix: '', thousands: ',', decimal: '.' }"/>
-                    </mat-form-field>
-
-                    <mat-form-field class="rsvfst" appearance="outline">
-                        <mat-label>FST</mat-label>
-                        <input matInput currencyMask placeholder="0.00" value="" formControlName="rsFST" [options]="{ prefix: '', thousands: ',', decimal: '.' }"/>
-                    </mat-form-field>
-
-                    <mat-form-field class="rsvlgt" appearance="outline">
-                        <mat-label>LGT</mat-label>
-                        <input matInput currencyMask placeholder="0.00" value="" formControlName="rsLGT" [options]="{ prefix: '', thousands: ',', decimal: '.' }"/>
-                    </mat-form-field>
-
-                    <mat-form-field class="rsvbvat" appearance="outline">
-                        <mat-label>Billing VAT</mat-label>
-                        <input matInput currencyMask placeholder="0.00" value="" formControlName="rsBillingVAT" [options]="{ prefix: '', thousands: ',', decimal: '.' }"/>
-                    </mat-form-field>
-
-                    <mat-form-field class="rsvoc" appearance="outline">
-                        <mat-label>Other Charges</mat-label>
-                        <input matInput currencyMask placeholder="0.00" value="" formControlName="rsOtherCharges" [options]="{ prefix: '', thousands: ',', decimal: '.' }"/>
-                    </mat-form-field>
->>>>>>> 8c77fa30ec2c4ad7545d0f48c6a58f5886ab5f30
                 </div>
 
                 <mat-form-field class="risn" appearance="outline" style="width:50%">
@@ -145,7 +95,7 @@
         </form>
     </div>
 </mat-dialog-content>
-<mat-dialog-actions align="end" style="margin-right: 70px;">
+<mat-dialog-actions align="end" style="margin-right: 30px;">
     <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial class="cc-confirm" style="padding:0% 2%; font-size:13px; margin: 0;" (click)="addList()">
         <span style="display: flex; align-items: center;"><mat-icon>save</mat-icon>{{actionBtn}}</span>
     </button>

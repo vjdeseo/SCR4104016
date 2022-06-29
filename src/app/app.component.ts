@@ -30,20 +30,15 @@ export class AppComponent implements OnInit{
 
   openDialog() {
     this.dialog.open(DialogComponent, {
-<<<<<<< HEAD
       width:'60%',
       height: '68%'
-=======
-      width:'75%',
-      height: '88%'
->>>>>>> 8c77fa30ec2c4ad7545d0f48c6a58f5886ab5f30
     }).afterClosed().subscribe(val=>{
       if(val == 'SAVE'){
         this.getAllList();
         alert("List Added Succesfully");
       }
     });
-  }
+  } 
   getAllList(){
      this.api.getadd()
 
@@ -56,23 +51,18 @@ export class AppComponent implements OnInit{
        },
        error:(err)=>{
         alert("Error adding a List");
-       }
+       } 
      });
   }
 
   editItem(row : any){
     this.dialog.open(DialogComponent,{
-<<<<<<< HEAD
       width:'60%',
-      height: '68%',
-=======
-      width:'75%',
-      height: '88%',
->>>>>>> 8c77fa30ec2c4ad7545d0f48c6a58f5886ab5f30
+      height: '67%',
       data : row,
     }).afterClosed().subscribe(val=>{
       if(val == 'UPDATE'){
-        this.getAllList();
+        this.getAllList(); 
         alert("List Succesfully");
       }
     });
