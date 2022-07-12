@@ -12,10 +12,10 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'TEST';
+  title = 'SCR4104016';
 
-  displayedColumns: string[] = ['action','id', 'rsInvoiceNo', 'rsDocumentStamp', 'rsDocumentTax', 'rsFST', 'rsLGT', 'rsBillingVAT', 'rsOtherCharges'];
-  dataSource!: MatTableDataSource<any>;
+  endorseTbldisplayedColumns: string[] = ['endorseTblDataAction','id', 'endorseTblDataInvoiceNo', 'endorseTblDataDocumentStamp', 'endorseTblDataDocumentTax', 'endorseTblDataFST', 'endorseTblDataLGT', 'endorseTblDataBillingVAT', 'endorseTblDataOtherCharges'];
+  endorseDataSrc!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit{
   openDialog() {
     this.dialog.open(DialogComponent, {
       width:'60%',
-      height: '68%'
+      height: '65%'
     }).afterClosed().subscribe(val=>{
       if(val == 'SAVE'){
         this.getAllList();
@@ -44,9 +44,9 @@ export class AppComponent implements OnInit{
 
      .subscribe({
        next:(res)=>{
-         this.dataSource = new MatTableDataSource(res);
-         this.dataSource.paginator = this.paginator;
-         this.dataSource.sort = this.sort;
+         this.endorseDataSrc = new MatTableDataSource(res);
+         this.endorseDataSrc.paginator = this.paginator;
+         this.endorseDataSrc.sort = this.sort;
          console.table(res);
        },
        error:(err)=>{
@@ -58,7 +58,7 @@ export class AppComponent implements OnInit{
   editItem(row : any){
     this.dialog.open(DialogComponent,{
       width:'60%',
-      height: '67%',
+      height: '65%',
       data : row,
     }).afterClosed().subscribe(val=>{
       if(val == 'UPDATE'){

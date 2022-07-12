@@ -1,81 +1,80 @@
+<mat-toolbar style="background-color: white; padding-right: 50px">
+    <span class="endorseSpnBtn"></span>
+    <button mat-raised-button color="primary" (click)="openDialog()" class="endorseAddBtn"><mat-icon>add_circle</mat-icon>ADD DATA</button>
+</mat-toolbar>
 
-  <mat-toolbar style="background-color: white; padding-right: 50px">
-    <span class="example-spacer"></span>
-    <button mat-raised-button color="primary" (click)="openDialog()" class="Add-Button"><mat-icon>add_circle</mat-icon>ADD DATA</button>
-  </mat-toolbar>
-
-  <div class="MyTable">
+<div class="">
     <div style="margin-top: 5px;">
 
-      <div class="" style="padding: 0 auto; overflow-y: hidden; margin: 0 50px;">
-        <table mat-table [dataSource]="dataSource" style="width: 100%;">
+        <div class="" style="padding: 0 auto; overflow-y: hidden; margin: 0 50px;">
+            <table mat-table [dataSource]="endorseDataSrc" style="width: 100%;">
 
 
-          <ng-container matColumnDef="action">
-            <th mat-header-cell *matHeaderCellDef  width="100px"></th>
-            <td mat-cell *matCellDef="let row" class="tdaction" style="text-align: center; border-right: solid 1px lightgray;">
-              <button mat-icon-button (click)="deleteList(row.id)" color="warn" style="padding: 0;">
+                <ng-container matColumnDef="endorseTblDataAction">
+                    <th mat-header-cell *matHeaderCellDef width="100px"></th>
+                    <td mat-cell *matCellDef="let row" class="endorseTblAction" style="text-align: center; border-right: solid 1px lightgray;">
+                        <button mat-icon-button (click)="deleteList(row.id)" color="warn" style="padding: 0;">
                   <mat-icon style="font-size: 16px;">delete</mat-icon>
               </button>
 
-              <button mat-icon-button (click)="editItem(row)" color="primary" style="padding: 0;">
+                        <button mat-icon-button (click)="editItem(row)" color="primary" style="padding: 0;">
                 <i class="fas fa-edit" style="font-size: 16px;"></i>
             </button>
-            </td>
-          </ng-container>
+                    </td>
+                </ng-container>
 
 
-          <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef width="75px">No.</th>
-            <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.id}} </td>
-          </ng-container>
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef width="75px">No.</th>
+                    <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.id}} </td>
+                </ng-container>
 
 
-          <ng-container matColumnDef="rsInvoiceNo">
-            <th mat-header-cell *matHeaderCellDef width="75px">Invoice&nbsp;No.</th>
-            <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.rsInvoiceNo}} </td>
-          </ng-container>
+                <ng-container matColumnDef="endorseTblDataInvoiceNo">
+                    <th mat-header-cell *matHeaderCellDef width="75px">Invoice&nbsp;No.</th>
+                    <td mat-cell *matCellDef="let row" style="text-align: center;"> {{row.endorseTblDataInvoiceNo}} </td>
+                </ng-container>
 
 
-          <ng-container matColumnDef="rsDocumentStamp">
-            <th mat-header-cell *matHeaderCellDef width="125px">Document&nbsp;Stamp</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsDocumentStamp | currency:" ":"symbol"}} </td>
-          </ng-container>
+                <ng-container matColumnDef="endorseTblDataDocumentStamp">
+                    <th mat-header-cell *matHeaderCellDef width="125px">Document&nbsp;Stamp</th>
+                    <td mat-cell *matCellDef="let row"> {{row.endorseTblDataDocumentStamp | currency:" ":"symbol"}} </td>
+                </ng-container>
 
 
-          <ng-container matColumnDef="rsDocumentTax">
-            <th mat-header-cell *matHeaderCellDef width="125px">Document&nbsp;Tax</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsDocumentTax | currency:" ":"symbol"}} </td>
-          </ng-container>
+                <ng-container matColumnDef="endorseTblDataDocumentTax">
+                    <th mat-header-cell *matHeaderCellDef width="125px">Document&nbsp;Tax</th>
+                    <td mat-cell *matCellDef="let row"> {{row.endorseTblDataDocumentTax | currency:" ":"symbol"}} </td>
+                </ng-container>
 
-          <ng-container matColumnDef="rsFST">
-            <th mat-header-cell *matHeaderCellDef width="100px">FST</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsFST | currency:" ":"symbol"}} </td>
-          </ng-container>
+                <ng-container matColumnDef="endorseTblDataFST">
+                    <th mat-header-cell *matHeaderCellDef width="100px">FST</th>
+                    <td mat-cell *matCellDef="let row"> {{row.endorseTblDataFST | currency:" ":"symbol"}} </td>
+                </ng-container>
 
-          <ng-container matColumnDef="rsLGT">
-            <th mat-header-cell *matHeaderCellDef width="100px">LGT</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsLGT | currency:" ":"symbol"}} </td>
-          </ng-container>
+                <ng-container matColumnDef="endorseTblDataLGT">
+                    <th mat-header-cell *matHeaderCellDef width="100px">LGT</th>
+                    <td mat-cell *matCellDef="let row"> {{row.endorseTblDataLGT | currency:" ":"symbol"}} </td>
+                </ng-container>
 
-          <ng-container matColumnDef="rsBillingVAT">
-            <th mat-header-cell *matHeaderCellDef width="100px">Billing&nbsp;VAT</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsBillingVAT  | currency:" ":"symbol"}} </td>
-          </ng-container>
+                <ng-container matColumnDef="endorseTblDataBillingVAT">
+                    <th mat-header-cell *matHeaderCellDef width="100px">Billing&nbsp;VAT</th>
+                    <td mat-cell *matCellDef="let row"> {{row.endorseTblDataBillingVAT | currency:" ":"symbol"}} </td>
+                </ng-container>
 
-          <ng-container matColumnDef="rsOtherCharges">
-            <th mat-header-cell *matHeaderCellDef width="100px">Other&nbsp;Charges</th>
-            <td mat-cell *matCellDef="let row"> {{row.rsOtherCharges | currency:" ":"symbol"}} </td>
-          </ng-container>
-
-
-
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-        </table>
+                <ng-container matColumnDef="endorseTblDataOtherCharges">
+                    <th mat-header-cell *matHeaderCellDef width="100px">Other&nbsp;Charges</th>
+                    <td mat-cell *matCellDef="let row"> {{row.endorseTblDataOtherCharges | currency:" ":"symbol"}} </td>
+                </ng-container>
 
 
-      </div>
+
+                <tr mat-header-row *matHeaderRowDef="endorseTbldisplayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: endorseTbldisplayedColumns;"></tr>
+            </table>
+
+
+        </div>
 
     </div>
-  </div>
+</div>

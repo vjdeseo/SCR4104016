@@ -15,11 +15,11 @@ export class ApiService {
     return this.http.get<any>("http://localhost:3000/rsList/");
   }
 
-  putData(data : any,id : number){
+  putData(data : any,id: number){
     return this.http.put<any>("http://localhost:3000/rsList/"+id, data); 
   }
   
-  deleteData(id:number){
-    return this.http.delete<any>("http://localhost:3000/rsList/"+id);
+  deleteData(endorseTblDataId:number){
+    return this.http.delete<any>("http://localhost:3000/rsList/"+endorseTblDataId);
   }
 }

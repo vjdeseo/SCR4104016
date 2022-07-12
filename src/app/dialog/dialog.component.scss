@@ -1,193 +1,195 @@
 :root {
-    --button-color: rgb(31,56,98);
-    --header-main-color: rgb(84,141,216);
-    --header-color: rgb(219,238,246);
-    --confirm-color: rgb(13,93,187);
-    --cancel-color: rgb(215,44,70);
-    --textbox-color:rgb(242,242,242);
-  }
-  :host {
+    --button-color: rgb(31, 56, 98);
+    --header-main-color: rgb(84, 141, 216);
+    --header-color: rgb(219, 238, 246);
+    --confirm-color: rgb(13, 93, 187);
+    --cancel-color: rgb(215, 44, 70);
+    --textbox-color: rgb(242, 242, 242);
+}
+
+ :host {
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
     color: #333;
     box-sizing: border-box;
-  }
+}
 
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-  }
+}
 
-  body{
+body {
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
-  }
-  .arstvif{
-    border: solid 1 px black;
-  }
+}
 
-
-  .picin, .rsin{
-    width: 25%;
-  }
-
-  .picin select, .rsin select{
-    width: 50%;
+span {
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
-    border: none;
-    border-bottom: solid 1px black;
-    height: 20px;
-  }
+}
 
-  .picdvs, .picvpt, .picvfst, .picvlgt, .picvbvat, .picvoc{
+.endorseDialogContainer {
+    border: solid 1 px black;
+}
+
+.endorsePolInvCovInvNo,
+.endorseRedSumInvNo {
+    width: 25%;
+}
+
+.endorsePolInvCovValDocStamp,
+.endorsePolInvCovValPreTax,
+.endorsePolInvCovValFST,
+.endorsePolInvCovValLGT,
+.endorsePolInvCovValBilVat,
+.endorsePolInvCovValOtCharge {
     display: flex;
     flex-direction: column;
-    background-color: var(--textbox-color);
-  }
-  .rsdvs, .rsvpt, .rsvfst, .rsvlgt, .rsvbvat, .rsvoc{
+}
+
+.endorseRedSumDocStamp,
+.endorseRedSumDocTax,
+.endorseRedSumFST,
+.endorseRedSumLGT,
+.endorseRedSumBilVat,
+.endorseRedSumOtCharge {
     display: flex;
     flex-direction: column;
-  }
-  .picdvs input, .picvpt input, .picvfst input, .picvlgt input, .picvbvat input, .picvoc input{
-    border: none;
-    background-color: var(--textbox-color);
-    text-align: right;
-    height: 20px;
-  }
-  .rsdvs input, .rsvpt input, .rsvfst input, .rsvlgt input, .rsvbvat input, .rsvoc input{
-    border: none;
-    text-align: right;
-    height: 20px;
-  }
-  .picf {
-    width: 30%;
-    padding: 0.75% 5% 2% 10%;
-  }
-  .rsfc{
-    width: 30%;
-    padding: 0.75% 10% 2% 10%;
-  }
+}
 
-  .cf{
+.endorsePolInvCovContainer {
+    width: 50%;
+    padding: 0.5% 1% 2% 8%;
+}
+
+.endorseRedSumContainer {
+    width: 50%;
+    padding: 0.5% 8% 2% 1%;
+}
+
+.endorseDialogContainerForm {
     display: flex;
     height: 100%;
-  }
-  .cc-confirm, .cc fas{
+}
+
+.endorseDialogConfirmBtn,
+.cc fas {
     border: solid 1px rgba(255, 165, 0, 0.7);
-    color:rgba(255, 165, 0, 0.7);
-  }
-  .cc-confirm{
+    color: rgba(255, 165, 0, 0.7);
+}
+
+.endorseDialogConfirmBtn {
     text-decoration: none;
     list-style: none;
     background-color: rgba(255, 165, 0, 0.7);
     color: white;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
-  }
-  .cc-confirm:hover{
+}
+
+.endorseDialogConfirmBtn:hover {
     transition-duration: 400ms;
     background-color: orange;
     color: white;
-  }
-  .cc-cancel{
+}
+
+.endorseDialogCancelBtn {
     text-decoration: none;
     list-style: none;
     background-color: rgba(255, 0, 0, 0.7);
     color: white;
     display: flex;
     justify-content: flex-start;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
-  }
+}
 
-  .cc-cancel:hover{
+.endorseDialogCancelBtn:hover {
     transition-duration: 400ms;
     background-color: red;
-    color:white;
-  }
+    color: white;
+}
 
-  .mat-dialog-title {
+.mat-dialog-title {
     padding: 10px;
     margin: 0;
     font-size: 18px;
-    font-weight: bolder;
 }
 
-.mat-dialog-title.title-dialog{
-  background-color: royalblue;
-  font-size: 12px;
-  color: white;
-  border-radius: 4px;
-  height: 5px;
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
+.mat-dialog-title.endorseDialogTitleTransNo {
+    background-color: royalblue;
+    font-size: 10px;
+    color: white;
+    border-radius: 10px;
+    height: 5px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
 }
+
 ::ng-deep .mat-dialog-container {
-  padding:10px;
-  width: 100%;
-  height: 100%;
-  overflow-x:hidden;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
 
+::ng-deep .mat-dialog-content {
+    max-height: 100vh;
 }
-::ng-deep .mat-dialog-content{
-  max-height:100vh;
-}
+
 ::ng-deep .mat-form-field-wrapper {
-  margin: 0.1em 0;
-  padding: 5px 0;
+    margin: 0;
+    padding: 5px 0;
 }
 
-::ng-deep .mat-form-field-appearance-outline.mat-form-field-wrapper {
-  margin: -0.25em;
+::ng-deep .mat-dialog-actions {
+    margin: 0;
+    padding: 0;
 }
 
-::ng-deep .mat-dialog-actions{
-  margin: 0;
-  padding: 0;
-}
-
-  @media screen and(max-width: 900px){
-    .cf{
+@media screen and(max-width: 900px) {
+    .cf {
         display: flex;
         flex-direction: column;
         padding: 0px;
     }
-    .picf, .rsfc{
+    .endorsePolInvCovContainer,
+    .rsfc {
         width: 80%;
         padding: 0% 10%;
     }
-    .picf{
+    .endorsePolInvCovContainer {
         padding-top: 2%;
     }
-    .rst{
+    .rst {
         margin-top: 5%;
     }
-    .arstvih{
-      text-align: center;
+    .endorseDialogTitle {
+        text-align: center;
     }
-    .mat-dialog-title.title-dialog, .mat-dialog-title.title-dialog1{
-      display:none;
+    .mat-dialog-title.endorseDialogTitleTransNo {
+        display: none;
     }
     .mat-dialog-title {
-      font-size: 15px;
-      text-align: center;
-      width: 100%;
-  }
-  ::ng-deep .mat-dialog-content{
-    max-height:66vh;
-  }
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+    }
+     ::ng-deep .mat-dialog-content {
+        max-height: 70vh;
+    }
+}
 
-  }
-  @media screen and(max-width: 830px){
+@media screen and(max-width: 830px) {
     .mat-dialog-title {
-      font-size: 15px;
-      text-align: center;
-      width: 100%;
-  }
-
-  .mat-dialog-title.title-dialog, .mat-dialog-title.title-dialog1{
-    display:none;
-  }
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+    }
+    .mat-dialog-title.endorseDialogTitleTransNo {
+        display: none;
+    }
 }
